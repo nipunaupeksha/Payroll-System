@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="paySalary" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57702de4-17e6-437b-8e13-8ac6971ee038">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="param1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from salary s,employee e where e.employeeId=s.employeeId and e.employeeId=$P{param1}]]>
+	</queryString>
+	<field name="employeeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salaryAdvance" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="loans" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noPay" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="damages" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etf" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="epf" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tax" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="basicSalary" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ot" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bonus" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transport" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="insentives" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalEarnings" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalDeductions" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="netSalary" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="secondName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maritialStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobileNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="landNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="joiningDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departmentId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gradeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roleId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="accNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transportType" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="20" uuid="e8a58a40-2bbc-4b39-b205-098bd61c4df9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[emp. ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="0" width="118" height="20" uuid="3977926e-0f99-4ece-85db-a76f9ca43e22"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="0" width="57" height="20" uuid="38c8e09d-8aa6-4680-b661-6494d5ea2680"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="0" width="87" height="20" uuid="73acd3c5-4c85-459b-8ea1-3eb4cb3e053f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total Earnings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="0" width="100" height="20" uuid="0a1a6235-03c2-4a03-9488-4656f8048c2a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total Deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="0" width="100" height="20" uuid="a39c2953-5909-4515-bf00-436fe6c12203"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Net Salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="54" height="20" uuid="d117cd5a-2d53-45e3-bb8c-10ceac92e025"/>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="61" height="20" uuid="0234a818-22af-4d49-bf9b-5ca52d7cb0ad"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="0" width="57" height="20" uuid="4cf42f72-614d-4827-8378-8d017d111780"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{secondName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="37" height="20" uuid="76d606f5-1d2f-4c01-90ee-847787f9008f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{salaryAdvance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="87" height="20" uuid="4272e330-d935-4613-b25f-fa6f087210cd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{totalEarnings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="100" height="20" uuid="4f4cd96e-cb06-4cd8-b877-961fc192de0e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{totalDeductions}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="100" height="20" uuid="a686d373-97d6-4a42-ad3a-28d24235c0c1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{netSalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

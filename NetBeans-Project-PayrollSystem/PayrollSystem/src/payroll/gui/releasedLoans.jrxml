@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="releasedLoans" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3dab9b14-ea16-4173-be82-5706f5b69ae9">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select * from loan l,employee e where l.employeeId=e.employeeId and Date(dueDate) <= curdate()]]>
+	</queryString>
+	<field name="loanId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employeeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="loanAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monthlyInstallment" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="timePeriod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dueDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="guarantor1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="guarantor2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="secondName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maritialStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobileNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="landNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="joiningDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departmentId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gradeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roleId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="basicSalary" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="accNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transportType" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="f31bad29-a912-464c-8c34-e49174502ba5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Loan ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="20" uuid="c93ec24b-4c65-4277-b267-dbe99d560db1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="20" uuid="f93cf52c-8c83-466f-8a75-c6838529dce9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="121" height="20" uuid="a4435860-3114-4855-ae09-3844cc581802"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="20" uuid="378336f5-4227-477d-8cf4-9a85a1af67c3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="20" uuid="39fec848-81b3-4468-8349-a202588fe5d3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Released Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="20" uuid="2590e10b-42af-45ed-899b-b2d78a61d7c7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Loan Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="1923f31c-58ff-4602-9b5f-3496b048d55b"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{loanId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="79" height="20" uuid="34c4ee92-c9e9-44f5-9d37-9844a36ce8b3"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="20" uuid="8cf8037c-34f2-4c3e-a442-2afb111e691d"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="20" uuid="21158efc-ec28-4eac-9168-337bab93079b"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="79" height="20" uuid="359c3018-e693-451d-aa6b-145281e2c3a6"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{secondName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="20" uuid="b917a26f-7163-463b-b286-31755774e483"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="20" uuid="4c5474e4-d0b2-4bf8-9c57-f916181be912"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

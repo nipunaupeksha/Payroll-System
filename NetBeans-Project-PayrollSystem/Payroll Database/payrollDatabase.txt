@@ -1,0 +1,160 @@
+drop database payrollSystem;
+create database payrollSystem;
+use payrollSystem;
+create table department(
+	departmentId varchar(10)NOT NULL,
+	departmentName varchar(20),
+	constraint primary key(departmentId)
+)ENGINE=INNODB;
+create table grade(
+	gradeId varchar(10)NOT NULL,
+	gradeName varchar(10),
+	noPayRate decimal(10,2),
+	normalOtAmount decimal(10,2),
+	weekendOtAmount decimal(10,2),
+	maxLoanAmount decimal(10,2),
+	maxAdvanceRate decimal(10,2),
+	vehicleAllowences decimal(10,2),
+	constraint primary key(gradeId)
+)ENGINE=INNODB;
+create table role(
+	roleId varchar(10)NOT NULL,
+	roleName varchar(20),
+	constraint primary key(roleId)
+)ENGINE=INNODB;
+create table employee(
+	employeeId varchar(10) NOT NULL,
+	firstName varchar(20),
+	secondName varchar(20),
+	nic varchar(10),
+	dob varchar(20),
+	address varchar(80),
+	gender varchar(10),
+	maritialStatus varchar(10),
+	mobileNum varchar(10),
+	landNum varchar(10),
+	email varchar(30),
+	joiningDate varchar(10),
+	departmentId varchar(15),
+	gradeId varchar(10),
+	roleId varchar(10),
+	basicSalary decimal(10,2),
+	bank varchar(20),
+	accNum varchar(20),
+	transportType int(10),
+	constraint foreign key(departmentId)references department(departmentId)on delete cascade on update cascade,
+	constraint foreign key(roleId)references role(roleId)on delete cascade on update cascade,
+	constraint foreign key(gradeId)references grade(gradeId)on delete cascade on update cascade,
+	constraint primary key (employeeId)
+)ENGINE=INNODB;
+create table advance(
+	employeeId varchar(10)NOT NULL,
+	date date,
+	advanceAmount decimal(10,2),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade,
+	constraint primary key (employeeId)
+)ENGINE=INNODB;
+create table attendance(
+	employeeId varchar(10)NOT NULL,
+	date varchar(20),
+	inTime varchar(10),
+	outTime varchar(10),
+	shortLeaveOutTime varchar(10),
+	shortLeaveInTime varchar(10),
+	otHours int(10),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade
+)ENGINE=INNODB;
+create table bonus(
+	gradeId varchar(10)NOT NULL,
+	date varchar(50),
+	bonusType varchar(20),
+	amount decimal(10,2),
+	constraint foreign key(gradeId)references grade(gradeId)on delete cascade on update cascade
+)ENGINE=INNODB;
+create table bonusType(
+	gradeId varchar(10)NOT NULL,
+	bonusType varchar(20),
+	amount decimal(10),
+	constraint foreign key(gradeId)references grade(gradeId)on delete cascade on update cascade
+)ENGINE=INNODB;
+create table damage(
+	employeeId varchar(10)NOT NULL,
+	date date,
+	departmentId varchar(10)NOT NULL,
+	description varchar(50),
+	damageCost decimal(10,2),
+	monthlyDeduction decimal(10,2),
+	timePeriod int(10),
+	dueDate varchar(10),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade,
+	constraint foreign key(departmentId)references department(departmentId)on delete cascade on update cascade
+)ENGINE=INNODB;
+create table leaves(
+	employeeId varchar(10)NOT NULL,
+	leaveDate varchar(10),
+	noOfDays int(10),
+	leaveType varchar(20),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade
+	)ENGINE=INNODB;
+create table loan(
+	loanId varchar(10)NOT NULL,
+	date date,
+	employeeId varchar(10)NOT NULL,
+	description varchar(50),
+	loanAmount decimal(10,2),
+	monthlyInstallment decimal(10,2),
+	timePeriod int(10),
+	dueDate varchar(10),
+	guarantor1 varchar(20),
+	guarantor2 varchar(20),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade,
+	constraint primary key(loanId,employeeId)
+)ENGINE=INNODB;
+create table salary(
+	salaryId varchar(10)NOT NULL,
+	employeeId varchar(10)NOT NULL,
+	date date,
+	salaryAdvance decimal(10,2),
+	loans decimal(10,2),
+	noPay decimal(10,2),
+	damages decimal(10,2),
+	etf decimal(10,2),
+	epf decimal(10,2),
+	tax decimal(10,2),
+	basicSalary decimal(10,2),
+	ot decimal(10,2),
+	bonus decimal(10,2),
+	transport decimal(10,2),
+	insentives decimal(10,2),
+	totalEarnings decimal(10,2),
+	totalDeductions decimal(10,2),
+	netSalary decimal(10,2),
+	constraint foreign key(employeeId)references employee(employeeId)on delete cascade on update cascade,
+constraint primary key(salaryId)
+)ENGINE=INNODB;
+create table settings(
+	epfRate decimal(10,2),
+	etfRate decimal(10,2),
+	taxRate decimal(10,2),
+	damageRate decimal(10,2),
+	loanRate decimal(10,2),
+	yearlyIncome decimal(50,2),
+	attendanceInsentive1 decimal(10,2),
+	attendanceInsentive2 decimal(10,2),
+	attendanceInsentive3 decimal(10,2),
+	maxHalfDayLeaves int(10),	
+	maxCasualLeaves int(10),
+	maxMedicalLeaves int(10),
+	maxVacationLeaves int(10),
+	maxPregnantLeaves int(10),
+	allMaximumLeaves int(10)
+)ENGINE=INNODB;
+create table user(
+	userName varchar(10)NOT NULL,
+	name varchar(20),
+	password varchar(500)NOT NULL,
+	constraint primary key(userName,password)
+)ENGINE=INNODB;
+create table bank(
+bankName varchar(30)
+)ENGINE=INNODB;

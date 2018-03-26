@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="annualReport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f366c30d-13fe-4705-8ac9-ff165929cab1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="param1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from salary s,employee e where s.employeeId=e.employeeId and YEAR(date)=$P{param1}]]>
+	</queryString>
+	<field name="employeeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salaryAdvance" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="loans" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noPay" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="damages" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etf" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="epf" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tax" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="basicSalary" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ot" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bonus" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transport" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="insentives" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalEarnings" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalDeductions" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="netSalary" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="secondName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maritialStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobileNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="landNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="joiningDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departmentId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gradeId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roleId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="accNum" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transportType" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="21" height="20" uuid="58753325-c2e2-4636-9be3-553acba7ab53"/>
+				<text><![CDATA[EID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="0" width="74" height="20" uuid="28d80027-56e7-453b-8802-02275d4f133b"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="0" width="37" height="20" uuid="f61e54fa-bc73-40a7-b0cc-ecd38b4967f8"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="60" height="20" uuid="275eb4b0-e4da-4c54-a2c8-7f5dbc26eeb4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="25" height="20" uuid="7bc08eda-193b-4fda-8656-79e05cf23c81"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[OT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="37" height="20" uuid="85587405-e7d0-4b5d-ae2b-196347f414ce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Bonus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="0" width="53" height="20" uuid="8ebe0296-d577-447e-afd8-4115f5de67fc"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="52" height="20" uuid="c564b448-103d-4d03-b55e-022a1c02a3d5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[insentives]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="37" height="20" uuid="5e028c7c-afcf-46db-b5ec-b6d79968a5fd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Adance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="0" width="37" height="20" uuid="9460e33c-2c77-4bd0-8ebb-984ffd5dc03b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Loans]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="37" height="20" uuid="b9175b9d-662b-4085-8d91-e74682882291"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Pay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="48" height="20" uuid="e3a350fb-4665-4c09-801d-db5f234e22d9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Damages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="0" width="25" height="20" uuid="4eff0496-c2a3-4f55-81b0-e728825727c5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ETF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="0" width="23" height="20" uuid="63c956b2-9d8c-46a0-a562-106bde6491a9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="529" y="0" width="26" height="20" uuid="d359c0fe-def8-46a9-a3c0-ab9e3c46775e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tax]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="21" height="20" uuid="5bb0630b-927a-49e4-89e4-2d9bdbb82671"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="0" width="37" height="20" uuid="d212cc75-56b6-4c05-a8d2-53b1f13f4b2d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="0" width="37" height="20" uuid="a32cbe9d-9f85-46b6-9de4-6a0ddbd46e64"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{secondName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="60" height="20" uuid="ec8ee322-2bed-4ba8-8dc0-356940bf04af"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{basicSalary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="25" height="20" uuid="3f272d21-0db8-4179-bbc1-a0782f06e736"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="37" height="20" uuid="1d35613b-c710-4d68-9fa8-bd11c7f20465"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bonus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="0" width="53" height="20" uuid="a902c396-be2d-4b52-9ea3-a0a3a75b1455"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{transport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="52" height="20" uuid="96cd3f2d-f143-4903-aec3-711f91a59e22"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{insentives}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="0" width="37" height="20" uuid="6cac3f93-c58f-49e0-8c13-12a67449c970"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{salaryAdvance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="37" height="20" uuid="0d782eec-1fb4-4583-8b19-dd0e4edf6868"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loans}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="37" height="20" uuid="f4b962fe-0a36-48ad-81ff-2da7cd09e5b0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{noPay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="48" height="20" uuid="0d5a2359-f4e1-44a2-bc06-d3f949dfbfd7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{damages}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="481" y="0" width="25" height="20" uuid="b06669d6-30d2-4ab4-8080-18ade802f18a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{etf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="23" height="20" uuid="9df42b5c-c956-4467-934d-88f92d5ba488"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{epf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="0" width="26" height="20" uuid="a66b1ced-c503-4131-9b9c-919afc436813"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tax}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
